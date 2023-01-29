@@ -8,7 +8,8 @@ import { Badge } from '@mui/material';
 const Container = styled.div`
     height: 60px;
     background-color: white;
-    color: black`
+    color: black;
+    margin-bottom: 20px;`
 
 const Wrapper = styled.div`
     padding: 10px 20px;
