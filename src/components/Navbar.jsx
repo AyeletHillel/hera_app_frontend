@@ -65,6 +65,12 @@ const Input = styled.input`
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
+const Anchor = styled.a`
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+`;
+
 
 const Navbar = () => {
   return (
@@ -78,9 +84,9 @@ const Navbar = () => {
             </SearchContainer>
           </Left>
           <Center><Logo>Hera.</Logo></Center>
-          <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <Right>          
+          <Anchor href="/register" ><MenuItem>REGISTER</MenuItem></Anchor>       
+          <Anchor href="/login" ><MenuItem>LOGIN</MenuItem></Anchor>  
           <MenuItem>
             <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlined />

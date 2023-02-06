@@ -1,13 +1,11 @@
-import './App.css';
-import Home from './pages/Home';
-import ProductList from './pages/ProductList';
-import Product from './pages/Product';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Cart from './pages/Cart';
+import { Outlet } from 'react-router-dom';
 
 function App() {
-  return <Home/>;
+  return (
+    <div>
+      <Outlet/>
+    </div>
+  )
 }
 
 export default App;
