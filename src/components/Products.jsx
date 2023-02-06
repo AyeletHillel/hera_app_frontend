@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { popularProducts } from "../data";
 import Product from "./Product";
+import { useLoaderData } from "react-router-dom";
 
 const Container = styled.div`
     padding: 20px;
@@ -9,13 +10,24 @@ const Container = styled.div`
     justify-content: space-between;
 `;
 
+const Anchor = styled.a`
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+`;
+
 const Products = () => {
+  const products = useLoaderData()
+
   return (
     <Container>
-      {popularProducts.map((item) => (
+      {products.map((item) => (
+        <Anchor href="#">
         <Product item={item} key={item.id} />
+        </Anchor>
       ))}
     </Container>
+
   );
 };
 
